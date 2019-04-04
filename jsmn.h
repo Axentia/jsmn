@@ -39,11 +39,11 @@ enum jsmnerr {
  */
 typedef struct {
 	jsmntype_t type;
-	int start;
-	int end;
-	int size;
+	short start;
+	short end;
+	short size;
 #ifdef JSMN_PARENT_LINKS
-	int parent;
+	short parent;
 #endif
 } jsmntok_t;
 

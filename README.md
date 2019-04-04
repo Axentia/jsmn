@@ -1,6 +1,7 @@
-
 JSMN
 ====
+
+[![Build Status](https://travis-ci.org/zserge/jsmn.svg?branch=master)](https://travis-ci.org/zserge/jsmn)
 
 jsmn (pronounced like 'jasmine') is a minimalistic JSON parser in C.  It can be
 easily integrated into resource-limited or embedded projects.
@@ -152,9 +153,9 @@ If something goes wrong, you will get an error. Error will be one of these:
 * `JSMN_ERROR_NOMEM` - not enough tokens, JSON string is too large
 * `JSMN_ERROR_PART` - JSON string is too short, expecting more JSON data
 
-If you get `JSON_ERROR_NOMEM`, you can re-allocate more tokens and call
+If you get `JSMN_ERROR_NOMEM`, you can re-allocate more tokens and call
 `jsmn_parse` once more.  If you read json data from the stream, you can
-periodically call `jsmn_parse` and check if return value is `JSON_ERROR_PART`.
+periodically call `jsmn_parse` and check if return value is `JSMN_ERROR_PART`.
 You will get this error until you reach the end of JSON data.
 
 Other info
